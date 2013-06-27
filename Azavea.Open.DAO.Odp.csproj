@@ -32,15 +32,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="GeoAPI">
-      <HintPath>..\externals\Azavea.Open.DAO\lib\geoapi\GeoAPI.dll</HintPath>
-    </Reference>
-    <Reference Include="NetTopologySuite">
-      <HintPath>..\externals\Azavea.Open.Common\lib\nettopologysuite\NetTopologySuite.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.framework, Version=2.5.9.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+    <Reference Include="GeoAPI, Version=1.6.4447.25411, Culture=neutral, PublicKeyToken=a1a0da7def465678, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\externals\Azavea.Open.Common\lib\nunit\nunit.framework.dll</HintPath>
+      <HintPath>..\Azavea.Open.DAO\lib\geoapi\GeoAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="NetTopologySuite, Version=1.12.4448.15243, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Azavea.Open.Common\lib\nettopologysuite\NetTopologySuite.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.5.9.10348, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Azavea.Open.Common\lib\nunit\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="Oracle.DataAccess, Version=2.112.3.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86" />
     <Reference Include="System" />
@@ -62,15 +64,15 @@
     <Compile Include="Tests\SdeStWktWriterTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\externals\Azavea.Open.Common\Azavea.Open.Common.csproj">
+    <ProjectReference Include="..\Azavea.Open.Common\Azavea.Open.Common.csproj">
       <Project>{ADBFE412-4F06-454A-AAF5-E93719E3B1FD}</Project>
       <Name>Azavea.Open.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\externals\Azavea.Open.DAO.OleDb\Azavea.Open.DAO.OleDb.csproj">
+    <ProjectReference Include="..\Azavea.Open.DAO.OleDb\Azavea.Open.DAO.OleDb.csproj">
       <Project>{9b652f15-df87-470b-a153-8420abefa504}</Project>
       <Name>Azavea.Open.DAO.OleDb</Name>
     </ProjectReference>
-    <ProjectReference Include="..\externals\Azavea.Open.DAO\Azavea.Open.DAO.csproj">
+    <ProjectReference Include="..\Azavea.Open.DAO\Azavea.Open.DAO.csproj">
       <Project>{A510DDB6-F817-4610-B08C-305EB937CE4F}</Project>
       <Name>Azavea.Open.DAO</Name>
     </ProjectReference>
