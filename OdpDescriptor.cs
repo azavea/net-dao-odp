@@ -104,8 +104,7 @@ namespace Azavea.Open.DAO.Odp
 
         public override bool UsePooling()
         {
-            // As I understand it, ODP handles its own pooling.
-            return false;
+            return true;
         }
 
         public override DbConnection CreateNewConnection()
