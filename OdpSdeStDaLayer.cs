@@ -141,7 +141,6 @@ namespace Azavea.Open.DAO.Odp
                 }
             }
             return valueStrings;
-            return null;
         }
 
         /// <summary>
