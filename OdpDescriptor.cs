@@ -145,10 +145,11 @@ namespace Azavea.Open.DAO.Odp
                 string paramName = DbCaches.ParamNames.Get(x);
                 
                 OracleParameter oracleParam;
-                if (addMe != DBNull.Value && addMe.GetType().GetProperty("GeometryType") != null)
+                if (addMe != DBNull.Value && addMe is string && ((string)addMe).Length > 3999)
                 {
-                    oracleParam = new OracleParameter(paramName, OracleDbType.Object, addMe.ToString().Length, addMe.ToString());
-                    oracleParam.UdtTypeName = "SDE.ST_GEOMETRY";
+                    // TODO: ensure the param is passed as a geom and convert to WKT here
+                    // Checking string length to trigger CLOB creation is a hack.
+                    oracleParam = new OracleParameter(paramName, OracleDbType.Clob, ((string)addMe).Length, addMe, ParameterDirection.Input);
                 }
                 else
                 {
