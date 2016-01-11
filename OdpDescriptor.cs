@@ -147,8 +147,7 @@ namespace Azavea.Open.DAO.Odp
                 OracleParameter oracleParam;
                 if (addMe != DBNull.Value && addMe.GetType().GetProperty("GeometryType") != null)
                 {
-                    oracleParam = new OracleParameter(paramName, OracleDbType.Object, addMe.ToString().Length, addMe.ToString());
-                    oracleParam.UdtTypeName = "SDE.ST_GEOMETRY";
+                    oracleParam = new OracleParameter(paramName, addMe.ToString());
                 }
                 else
                 {
