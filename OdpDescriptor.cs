@@ -145,7 +145,7 @@ namespace Azavea.Open.DAO.Odp
                 string paramName = DbCaches.ParamNames.Get(x);
                 
                 OracleParameter oracleParam;
-                if (addMe != DBNull.Value && addMe is string && ((string)addMe).Length > 3999)
+                if (addMe != DBNull.Value && addMe is string && ((string)addMe).Length >= 148)
                 {
                     // TODO: ensure the param is passed as a geom and convert to WKT here
                     // Checking string length to trigger CLOB creation is a hack.
